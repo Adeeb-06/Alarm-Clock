@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    background: #4a98f7;
+}
+
+body,
+.alarm-box,
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    position: relative;
+    bottom: 41px;
+    font-size: 26px;
+    font-weight: 501;
+}
+
+.alarm-box {
+    background: #fff;
+    width: 440px;
+    flex-direction: column;
+    padding: 30px 30px 38px;
+    position: relative;
+    height: 442px;
+    border-radius: 5px;
+}
+@media screen and (max-width:450px) {
+  .alarm-box{
+    width: 342px;
+  }
+}
+
+.alarm-box .content {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.alarm-box .content.disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.content .column {
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    width: calc(100% / 3 - 5px);
+}
+@media screen and(max-width:410px) {
+    .content .column  {
+        width: calc(96% / 3 - 4px);
+    }
+}
+
+.column select {
+    outline: none;
+    border: none;
+    height: 53px;
+    width: 100%;
+    font-size: 19px;
+}
+
+@media screen and (max-width:450px) {
+    .column select {
+        height: 41px;
+        width: 102%;
+        font-size: 14px;
+    }
+}
+
+.alarm-box button {
+    position: absolute;
+    bottom: 12px;
+    padding: 16px 0;
+    width: 90%;
+    margin-top: 20px;
+    font-size: 20px;
+    left: 16px;
+    display: flex;
+    background: #4a98f7;
+    border: none;
+    outline: none;
+    color: #fff;
+    align-content: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.alarm-box button:hover {
+    opacity: 0.5;
+}
+
+
+.logo {
+    height: 187px;
+    top: -67px;
+    position: relative;
+}
+@media screen and (max-width:450px) {
+ .logo{
+    height: 164px;
+ }
+}
